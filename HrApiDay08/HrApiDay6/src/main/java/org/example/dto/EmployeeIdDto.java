@@ -1,7 +1,7 @@
 package org.example.dto;
 
+public class EmployeeIdDto {
 
-public class EmpIDDto {
 
     private String deptCode;
     private int seq;
@@ -35,4 +35,5 @@ public class EmpIDDto {
     public String toString() {
         return deptCode + seq + hireYear;
     }
+
 }

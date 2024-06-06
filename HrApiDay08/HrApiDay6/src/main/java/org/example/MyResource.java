@@ -6,7 +6,7 @@ import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.UriInfo;
-import org.example.dto.EmpIDDto;
+import org.example.dto.EmployeeIdDto;
 
 
 import java.time.LocalDate;
@@ -51,17 +51,17 @@ public class MyResource {
     }
 
 
-    @GET
-    @Path("{day}")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getDate(@PathParam("day") LocalDate day) {
-        return "The date is: " + day;
-    }
+//    @GET
+//    @Path("{day}")
+//    @Produces(MediaType.TEXT_PLAIN)
+//    public String getDate(@PathParam("day") LocalDate day) {
+//        return "The date is: " + day;
+//    }
 
     @GET
     @Path("/employees/{empId}")
     @Produces(MediaType.APPLICATION_JSON)
-    public EmpIDDto getDate(@PathParam("empId") EmpIDDto empId) {
+    public EmployeeIdDto getDate(@PathParam("empId") EmployeeIdDto empId) {
         return empId;
     }
 

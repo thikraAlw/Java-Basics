@@ -6,6 +6,7 @@ import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriInfo;
+import org.example.helpers.EmployeeIdConverterProvider;
 import org.example.models.Department;
 import org.example.models.Employee;
 
@@ -15,6 +16,9 @@ import java.util.List;
 
 @Path("/employees")
 public class EmployeeController {
+
+
+//EmployeeDao dao = new EmployeeDao();
 
     @GET
     public ArrayList<Employee> getAllEmployees(@PathParam("deptId") Integer deptId) {
@@ -27,11 +31,29 @@ public class EmployeeController {
         return employees;
     }
 
-    @POST
-    public void insertEmployee(@PathParam("deptId") Integer deptId, Employee emp) {
+//    @GET
+//    @Path("{employee_id}")
+//    public Employee SELECT_ONE_EMPLOYEE(@PathParam("employee_id") int employee_id) {
+//
+////        try {
+//////            return dao.selectEmployees(employee_id);
+////        } catch (Exception e) {
+////            throw new RuntimeException(e);
+////        }
+//    }
+//
+//    @DELETE
+//    @Path("{employee_id}")
+//    public void DELETE_JOB(@PathParam("employee_id") int employee_id) {
+//
+//        try {
+////            dao.deleteEmployees(employee_id);
+//        } catch (Exception e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 
-        System.out.println(deptId);
-        System.out.println(emp);
-    }
+
+
 
 }
